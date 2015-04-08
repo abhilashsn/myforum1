@@ -1,0 +1,7 @@
+%h1= @posts.title
+%p= @posts.content
+
+
+= link_to "Edit", edit_post_path(@posts)
+= link_to "delete", post_path, method: :delete, data: {confirm: "are you sure?"}
+= link_to "Home", root_path
