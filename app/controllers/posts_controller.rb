@@ -14,11 +14,11 @@ end
 
 
 def new 
-@posts = Post.new
+@posts = current_user.posts.build
 end
 
 def create 
-@posts = Post.new(post_params)
+@posts = current_user.posts.build(post_params)
 if @posts.save
 	redirect_to @posts
 else
